@@ -8,7 +8,7 @@ Compress, resize, crop, convert formats, prepare passport photos, upscale to an 
 
 Open https://ak5h88.github.io/chromaflux/ once GitHub Pages finishes deploying.
 
-Your images and drawn signatures are processed in your browser. They are not uploaded to GitHub or another image service. The site has no upload service or analytics. Fonts are bundled locally. The music player loads YouTube scripts and streams from YouTube; editing files are never shared with YouTube. Closing or refreshing clears the editing session.
+Your images and drawn signatures are processed in your browser. They are not uploaded to GitHub or another image service. The site has no upload service or analytics. Fonts are bundled locally. Music plays a bundled MP3 directly from this website, with no third-party player. Closing or refreshing clears the editing session.
 
 The website itself is public. Image privacy does not restrict who can open the website.
 
@@ -22,7 +22,7 @@ There is no build step. GitHub Pages serves the `main` branch from the repositor
 
 ## Limits
 
-The upscaler resizes and optionally sharpens; it does not use AI to recover missing detail. Scan output is an image, without OCR or PDF generation. Signature styles use six bundled handwriting fonts, with twelve variations and freehand drawing.
+The upscaler resizes and optionally sharpens; it does not use AI to recover missing detail. Scan output is an image, without OCR or PDF generation. Signature styles use twelve bundled handwriting fonts, with eighteen variations and freehand drawing.
 
 Input images are limited to 30 MB and 64 megapixels; output is limited to 64 megapixels and 16,000 pixels per side. Large images may exceed a phone's available memory. Supported input formats depend on the browser.
 
@@ -46,6 +46,12 @@ Source preview support varies by browser; conversion supports more inputs than a
 
 ## Music player
 
-A single circular Play/Pause button sits in the top-right corner. It plays the user-provided soundtrack.mp3 directly from this website, without a video, track title, or external player. Playback starts only after Play, initially at 35% volume. Pause preserves the playback position. Music pauses when the tab goes into the background or a local audio/video preview starts. Playback errors are announced accessibly, with a retry hint on the button.
+A single circular Play/Pause button sits in the top-right corner. It plays the user-provided soundtrack.mp3 directly from this website, without a video, track title, or external player. Playback is attempted when the site opens, initially at 35% volume. Browser autoplay restrictions may require Play or a first interaction. Pause preserves the playback position. Music pauses when the tab goes into the background or a local audio/video preview starts. Playback errors are announced accessibly, with a retry hint on the button.
 
 Keep soundtrack.mp3 alongside index.html (or alongside ChromaFlux.html for the standalone version). The MP3 is also included in the phone and GitHub packages. There are no third-party music requests. Editing files remain in the browser.
+
+## Glass workspace refresh
+
+Translucent surfaces, rounded controls, soft color gradients, and gentle animations with reduced-motion support. Resize includes four adjustable corner handles, exact output dimensions, and Original, Freeform, Square, Wallpaper 9:16, 4:5, 5:7, 3:4, 3:5, 2:3, and 16:9 shapes. Framing crops the selected area before resizing; changing width and height sets the final export dimensions.
+
+Signature previews start with “text here”. Six user-provided font families add to the six existing fonts (18 variations total). Duplicate TTF/OTF versions are included only once per family. User-provided font notices are preserved in FONT-LICENSES.txt and fonts/USER-FONT-README.pdf. Some are personal-use/demo fonts.
