@@ -1,0 +1,8 @@
+{
+  "name": "chromaflux-youtube-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal YouTube video/audio downloader backend for ChromaFlux",
+  "scripts": {"start": "node youtube-server.cjs"},
+  "engines": {"node": ">=24"}
+}

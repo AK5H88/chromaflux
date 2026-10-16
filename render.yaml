@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: chromaflux-downloader
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: DOWNLOAD_ACCESS_KEY
+        generateValue: true
+      - key: ALLOWED_ORIGINS
+        value: https://ak5h88.github.io
+      - key: MAX_FILE_BYTES
+        value: "2147483648"
