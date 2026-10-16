@@ -8,7 +8,7 @@ Compress, resize, crop, convert formats, prepare passport photos, upscale to an 
 
 Open https://ak5h88.github.io/chromaflux/ once GitHub Pages finishes deploying.
 
-Your images and drawn signatures are processed in your browser. They are not uploaded to GitHub or another image service. The site has no analytics, external scripts, remote font requests, or API keys. Closing or refreshing clears the editing session.
+Your images and drawn signatures are processed in your browser. They are not uploaded to GitHub or another image service. The site has no upload service or analytics. Fonts are bundled locally. The music player loads YouTube scripts and streams from YouTube; editing files are never shared with YouTube. Closing or refreshing clears the editing session.
 
 The website itself is public. Image privacy does not restrict who can open the website.
 
@@ -43,3 +43,9 @@ Actual result previews, download links, size comparison, progress and cancellati
 File limits: 80 MB on mobile layouts, 200 MB on larger layouts. Video output is capped at a 1920px long edge. Processing may be slower than playback, especially on phones. Keep the tab open. The engine requires a current browser with WebAssembly, Workers and DecompressionStream. No SharedArrayBuffer or cross-origin isolation is required.
 
 Source preview support varies by browser; conversion supports more inputs than a browser can preview. Audio/video tools require HTTP(S); local file opening continues to support the image tools. For local media use, run the included launcher with all engine assets.
+
+## Music player
+
+The visible YouTube player streams “Action” by Miyagi & Эндшпиль feat. Крип-А-Крип (video R8SALummBeU). It offers Play/Pause, Stop, volume buttons and a slider. It attempts audible playback at 35% volume when a visitor opens the site. Browsers may require the visitor to tap Play first; autoplay with sound cannot be guaranteed.
+
+Stop resets the song to the beginning. Stop & hide removes the embedded player and frees space for editing. Music pauses when the tab goes into the background, the player leaves view, or a local audio/video preview starts. Music requires internet and an HTTP(S) page; the image tools continue to work offline. YouTube playback availability and its privacy policy apply. No song file is downloaded, copied or hosted by this website.
