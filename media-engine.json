@@ -1,0 +1,26 @@
+{
+  "version": "0.12.10",
+  "size": 32232419,
+  "chunks": [
+    {
+      "name": "media-core-1.bin",
+      "size": 4347625,
+      "sha256": "d0676620a16080ba26866ccdedc83d2d131abac93f3b446b8d5e0e53423fe702",
+      "decodedSize": 12582912
+    },
+    {
+      "name": "media-core-2.bin",
+      "size": 2974475,
+      "sha256": "ccc4685985fb1d911b8c75d5bb3ced3391cff449c1ed3b8477b58fcd84d6a60a",
+      "decodedSize": 12582912
+    },
+    {
+      "name": "media-core-3.bin",
+      "size": 2937934,
+      "sha256": "f28c40fb396558e49555f59f388d4c73a4d6b2cd07e89869b35083ca821a161d",
+      "decodedSize": 7066595
+    }
+  ],
+  "encoding": "gzip",
+  "downloadSize": 10260034
+}
