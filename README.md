@@ -46,6 +46,6 @@ Source preview support varies by browser; conversion supports more inputs than a
 
 ## Music player
 
-The visible YouTube player streams “Action” by Miyagi & Эндшпиль feat. Крип-А-Крип (video R8SALummBeU). It offers Play/Pause, Stop, volume buttons and a slider. It attempts audible playback at 35% volume when a visitor opens the site. Browsers may require the visitor to tap Play first; autoplay with sound cannot be guaranteed.
+A single circular Play/Stop button sits in the top-right corner. Nothing loads from YouTube until Play is pressed. A compact visible YouTube player opens below the button during playback; Stop closes and destroys it. The player streams Action by Miyagi & Эндшпиль feat. Крип-А-Крип (video R8SALummBeU) at an initial volume of 35%. YouTube's native controls remain available in the player.
 
-Stop resets the song to the beginning. Stop & hide removes the embedded player and frees space for editing. Music pauses when the tab goes into the background, the player leaves view, or a local audio/video preview starts. Music requires internet and an HTTP(S) page; the image tools continue to work offline. YouTube playback availability and its privacy policy apply. No song file is downloaded, copied or hosted by this website.
+Music stops when the tab goes into the background or a local audio/video preview starts. Press Play to start again. Music requires internet and an HTTP(S) page. No song file is downloaded, copied or hosted. Your editing files stay on your device. YouTube playback availability and its privacy policy apply.
