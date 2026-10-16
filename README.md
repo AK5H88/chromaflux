@@ -8,7 +8,7 @@ Compress, resize, crop, convert formats, prepare passport photos, upscale to an 
 
 Open https://ak5h88.github.io/chromaflux/ once GitHub Pages finishes deploying.
 
-Your images and drawn signatures are processed in your browser. They are not uploaded to GitHub or another image service. The site has no analytics, external scripts, remote font requests, or API keys. Closing or refreshing clears the editing session.
+Your images and drawn signatures are processed in your browser. They are not uploaded to GitHub or another image service. The site has no analytics, external scripts, remote font requests, or remote font dependencies. The YouTube downloader separately requires your private service access key. Closing or refreshing clears the editing session.
 
 The website itself is public. Image privacy does not restrict who can open the website.
 
@@ -43,3 +43,13 @@ Actual result previews, download links, size comparison, progress and cancellati
 File limits: 80 MB on mobile layouts, 200 MB on larger layouts. Video output is capped at a 1920px long edge. Processing may be slower than playback, especially on phones. Keep the tab open. The engine requires a current browser with WebAssembly, Workers and DecompressionStream. No SharedArrayBuffer or cross-origin isolation is required.
 
 Source preview support varies by browser; conversion supports more inputs than a browser can preview. Audio/video tools require HTTP(S); local file opening continues to support the image tools. For local media use, run the included launcher with all engine assets.
+
+## YouTube downloader
+
+The online downloader connects to https://chromaflux-downloader.onrender.com. Open the YouTube downloader tool and enter your private DOWNLOAD_ACCESS_KEY from Render → chromaflux-downloader → Environment. Never commit or share the key. It is held in page memory, sent only to your downloader service, and cleared on refresh or disconnect.
+
+Choose highest-available video with audio, an available resolution cap, original-quality audio, or converted MP3. Original streams are preserved; video and audio are combined into MKV without re-encoding. 4K/8K options depend on the actual source. MP3 conversion does not improve quality.
+
+YouTube links are sent to this separate service. Other image, audio and video files continue to be processed locally. Files are temporary, expire after one hour or a service restart, and are limited to 2 GiB. One download runs at a time. Free hosting can take 50 seconds or more to wake up. YouTube may refuse requests from hosting providers; successful hosting does not guarantee a video can be downloaded. Login-restricted, private and protected content is not supported.
+
+The service uses yt-dlp and FFmpeg. Deployment files and YOUTUBE-SERVICE.md are included. youtube-service.json contains only the public service URL, never a key.
