@@ -55,3 +55,11 @@ Keep soundtrack.mp3 alongside index.html (or alongside ChromaFlux.html for the s
 Translucent surfaces, rounded controls, soft color gradients, and gentle animations with reduced-motion support. Resize includes four adjustable corner handles, exact output dimensions, and Original, Freeform, Square, Wallpaper 9:16, 4:5, 5:7, 3:4, 3:5, 2:3, and 16:9 shapes. Framing crops the selected area before resizing; changing width and height sets the final export dimensions.
 
 Signature previews start with “text here”. Six user-provided font families add to the six existing fonts (18 variations total). Duplicate TTF/OTF versions are included only once per family. User-provided font notices are preserved in FONT-LICENSES.txt and fonts/USER-FONT-README.pdf. Some are personal-use/demo fonts.
+
+## Background remover
+
+A local AI cutout tool with transparent PNG export at the original dimensions, Erase/Restore brushes with size and softness, 100%–400% zoom, view panning, undo/redo, original comparison and edge cleanup/feathering. Preview background colours do not alter the transparent download. Selected images are never uploaded. AI results vary and can be corrected with the brushes. Input limits: 30 MB; 12 megapixels on larger layouts or 6 megapixels on mobile layouts.
+
+The pinned BRIA RMBG 1.4 quantized ONNX model and ONNX Runtime Web 1.20.1 are self-hosted. First use downloads about 40 MB. Inference runs in a cancellable Worker with a single WASM thread, without SharedArrayBuffer or a server. Downloaded model chunks and decompressed model bytes are checked with SHA-256. No third-party scripts or image-upload service is used. Keep background-worker.js, bg-engine.json, bg-model-1.bin, bg-model-2.bin, ort.wasm.min.js, ort-wasm-simd-threaded.mjs, ort-wasm-simd-threaded.wasm, and BACKGROUND-LICENSES.txt beside the published HTML.
+
+The model is provided for personal/non-commercial use under the provider terms; commercial use requires a provider license. Runtime MIT license and third-party notices, model attribution, revision and model card are in BACKGROUND-LICENSES.txt.

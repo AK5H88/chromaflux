@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "model": "BRIA RMBG 1.4 quantized",
+  "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+  "compression": "gzip",
+  "inputSize": 1024,
+  "rawBytes": 44403226,
+  "modelSha256": "a6648479275dfd0ede0f3a8abc20aa5c437b394681b05e5af6d268250aaf40f3",
+  "files": [
+    {
+      "name": "bg-model-1.bin",
+      "bytes": 16777216,
+      "sha256": "ebce3ea2ce38dfc3abc14e59469fe66c44ca6f754dee818dac7b28ed10f0d19f"
+    },
+    {
+      "name": "bg-model-2.bin",
+      "bytes": 13468652,
+      "sha256": "50e0ea2da5ae1b8812c7db2d8e86b1b91d21db1b4b7dae5b478e4fc8a060d91b"
+    }
+  ]
+}
