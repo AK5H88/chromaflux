@@ -46,6 +46,6 @@ Source preview support varies by browser; conversion supports more inputs than a
 
 ## Music player
 
-A single circular Play/Stop button sits in the top-right corner. Nothing loads from YouTube until Play is pressed. A compact visible YouTube player opens below the button during playback; Stop closes and destroys it. The player streams Action by Miyagi & Эндшпиль feat. Крип-А-Крип (video R8SALummBeU) at an initial volume of 35%. YouTube's native controls remain available in the player.
+A single circular Play/Pause button sits in the top-right corner. It plays the user-provided soundtrack.mp3 directly from this website, without a video, track title, or external player. Playback starts only after Play, initially at 35% volume. Pause preserves the playback position. Music pauses when the tab goes into the background or a local audio/video preview starts. Playback errors are announced accessibly, with a retry hint on the button.
 
-Music stops when the tab goes into the background or a local audio/video preview starts. Press Play to start again. Music requires internet and an HTTP(S) page. No song file is downloaded, copied or hosted. Your editing files stay on your device. YouTube playback availability and its privacy policy apply.
+Keep soundtrack.mp3 alongside index.html (or alongside ChromaFlux.html for the standalone version). The MP3 is also included in the phone and GitHub packages. There are no third-party music requests. Editing files remain in the browser.
