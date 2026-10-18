@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "model": "Real-ESRGAN general-x4v3",
+  "scale": 4,
+  "input": "RGB float32 [0,1], NCHW",
+  "revision": "8e7094416ad91ec7477e968d348cd78742e20dc6",
+  "source": "https://github.com/ningtoba/Browsersnip-Upscale/blob/8e7094416ad91ec7477e968d348cd78742e20dc6/public/models/realesr-general-x4v3.onnx",
+  "originalWeights": "https://github.com/xinntao/Real-ESRGAN/releases/tag/v0.2.5.0",
+  "compression": "gzip",
+  "rawBytes": 4945202,
+  "modelSha256": "4ca39b3a965ecab832861860f046400bdac7727e10f40cc75ab2393104346e08",
+  "files": [
+    {
+      "name": "upscale-model.bin",
+      "bytes": 4536580,
+      "sha256": "8045c45cd70e52a2dabc9f63af02dc18e1a6c8ec9a9d019183d55451e33cd9ba"
+    }
+  ]
+}

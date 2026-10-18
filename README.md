@@ -22,7 +22,7 @@ There is no build step. GitHub Pages serves the `main` branch from the repositor
 
 ## Limits
 
-The upscaler resizes and optionally sharpens; it does not use AI to recover missing detail. Scan output is an image, without OCR or PDF generation. Signature styles use twelve bundled handwriting fonts, with eighteen variations and freehand drawing.
+The upscaler offers local Real-ESRGAN AI enhancement and Basic resize. AI synthesizes plausible detail; it cannot guarantee recovery of lost detail. Scan output is an image, without OCR or PDF generation. Signature styles use twelve bundled handwriting fonts, with eighteen variations and freehand drawing.
 
 Input images are limited to 30 MB and 64 megapixels; output is limited to 64 megapixels and 16,000 pixels per side. Large images may exceed a phone's available memory. Supported input formats depend on the browser.
 
@@ -67,3 +67,11 @@ The model is provided for personal/non-commercial use under the provider terms; 
 ## Upscale comparison
 
 After creating an upscaled image, an aligned before/after slider reveals the original and exported result at the same displayed size. Drag the divider or use the accessible range control; arrow keys adjust the reveal. Zoom in/out buttons, Fit, and actual-pixel presets support detail inspection. Drag the zoomed image or scroll to pan both layers together. Zoom is measured against output pixels; the original is enlarged to match the result for an equal-area comparison. Comparison settings do not alter the downloaded image. Other image tools retain their side-by-side previews.
+
+## On-device AI upscaling
+
+AI detail is the default. The pinned Real-ESRGAN general-x4v3 ONNX model generates a 4× image in a single-thread WASM worker. Lower outputs are downscaled; sizes beyond 4× use further resizing, clearly described in the preview. It preserves transparency, offers progress/Cancel, and keeps the aligned comparison slider and zoom. No image upload, server, API key or paid service is used. Basic resize stays available. First use downloads about 16 MB (4.5 MB model plus shared engine).
+
+Input caps: 2 megapixels on desktop and 0.5 megapixels on mobile layouts. AI output caps: 48 megapixels desktop / 16 mobile, in addition to the existing dimensions limit. Large AI jobs may take several minutes. Inference uses 128px cores with 36px context on every internal edge to avoid tile seams. Cancellation terminates the worker immediately. Download/model verification errors are shown without silently substituting basic resizing.
+
+Keep upscale-worker.js, upscale-engine.json, upscale-model.bin, UPSCALE-LICENSES.txt and the shared ONNX runtime assets beside the hosted HTML. The model SHA256 and pinned export revision are in the manifest; BSD-3-Clause model and MIT exporter notices are in UPSCALE-LICENSES.txt. Runtime notices are in BACKGROUND-LICENSES.txt.
