@@ -63,3 +63,7 @@ A local AI cutout tool with transparent PNG export at the original dimensions, E
 The pinned BRIA RMBG 1.4 quantized ONNX model and ONNX Runtime Web 1.20.1 are self-hosted. First use downloads about 40 MB. Inference runs in a cancellable Worker with a single WASM thread, without SharedArrayBuffer or a server. Downloaded model chunks and decompressed model bytes are checked with SHA-256. No third-party scripts or image-upload service is used. Keep background-worker.js, bg-engine.json, bg-model-1.bin, bg-model-2.bin, ort.wasm.min.js, ort-wasm-simd-threaded.mjs, ort-wasm-simd-threaded.wasm, and BACKGROUND-LICENSES.txt beside the published HTML.
 
 The model is provided for personal/non-commercial use under the provider terms; commercial use requires a provider license. Runtime MIT license and third-party notices, model attribution, revision and model card are in BACKGROUND-LICENSES.txt.
+
+## Upscale comparison
+
+After creating an upscaled image, an aligned before/after slider reveals the original and exported result at the same displayed size. Drag the divider or use the accessible range control; arrow keys adjust the reveal. Zoom in/out buttons, Fit, and actual-pixel presets support detail inspection. Drag the zoomed image or scroll to pan both layers together. Zoom is measured against output pixels; the original is enlarged to match the result for an equal-area comparison. Comparison settings do not alter the downloaded image. Other image tools retain their side-by-side previews.
